@@ -1,0 +1,166 @@
+ENTIDADES
+
+Persona
+	- Nombre(s)
+	- Apellido(s)
+	- DNI (PK)
+
+Alumno
+	- Matricula Alumno (PK)
+
+Docente
+	- Matricula Docente
+	- CUIL (PK)
+
+Administrador <<< X
+
+Materia
+	- Nombre
+	- Aula
+	- Horario
+	- Comision
+		- Docentes
+	- ID Edificio
+	- ID Materia (PK)
+
+Comision <<< X
+
+Departamento
+	- Nombre
+	- ID Depto (PK)
+
+Carrera
+	- Nombre
+	- ID (PK)
+
+Edificio
+	- Nombre
+	- ID (PK)
+
+
+
+
+FORMAS NORMALES
+
+1°
+	- Nombre único
+	- No Valores de registros repetidos
+	- Columnas atómicas -> indivisibles
+
+
+
+Ya está en 1ra forma normal.
+
+
+
+2°
+	- Todos los atributos dependen de la clave primaria
+	- Eliminar dependencia parcial:
+		- Datos que se pueden identificar en si mismos (claves candidatas o entidades debiles).
+		- Si esto ocurre, separar el dato en una nueva tabla (con su propia clave).
+
+Ya está en 2da forma normal.
+
+
+
+3°
+
+	- Eliminar dependencia transitiva:
+		- Atributos que no son claves pero dependen de (o dan lugar a) otros atributos que tampoco son claves.
+		- Si esto ocurre, separar en tablas, manteniendo el vínculo (FKs -- foreign keys).
+
+
+Persona
+	- Nombre(s)
+	- Apellido(s)
+	- DNI (PK)
+
+Alumno
+	- Matricula Alumno (PK)
+	- DNI (FK)
+
+Docente
+	- Matricula Docente
+	- CUIL (PK)
+	- DNI (FK)
+
+Materia
+	- Nombre
+	- Aula
+	- Horario
+	- ID Comision (FK)
+	- ID Edificio (FK)
+	- ID Materia (PK)
+
+Comision
+	- CUIL Docente (FK)
+	- ID Comision (PK)
+
+Departamento
+	- Nombre
+	- ID Depto (PK)
+	- ID Carrera (FK)
+
+Carrera
+	- Nombre
+	- ID (PK)
+
+Edificio
+	- Nombre
+	- ID (PK)
+
+
+
+Ahora está en 3FN.
+
+
+
+
+TIPOS DE LOS ATRIBUTOS:
+
+
+Persona
+	- Nombre(s) (string)
+	- Apellido(s) (string)
+	- DNI (PK) (int)
+
+Alumno
+	- Matricula Alumno (PK) (alfanumerica -- varchar? o int)
+	- DNI (FK) (int)
+
+Docente
+	- Matricula Docente (alfanumerica -- varchar? o int)
+	- CUIL (PK) (int)
+	- DNI (FK) (int)
+
+Materia
+	- Nombre (string)
+	- Aula (int)
+	- Horario (date)
+	- Comision (int)
+	- ID Edificio (FK) (int)
+	- ID Materia (PK) (int)
+
+Departamento
+	- Nombre (string)
+	- ID Depto (PK) (int)
+	- ID Carrera (FK) (int)
+
+Carrera
+	- Nombre (string)
+	- ID (PK) (int)
+
+Edificio
+	- Nombre (string)
+	- ID (PK) (int)
+
+
+
+
+
+
+
+
+
+
+
