@@ -7,7 +7,7 @@ Docente: Nicolas Perez
 
 -- -----------------------------------------------------
 
-LINK AL DER: [paste here]
+LINK AL DER: https://github.com/FrancoSosaZ0206/SIU-Guarani--TP-/blob/main/tp_final_der.svg
 LINK AL VIDEO EXPLICATIVO: [paste here]
 
 */
