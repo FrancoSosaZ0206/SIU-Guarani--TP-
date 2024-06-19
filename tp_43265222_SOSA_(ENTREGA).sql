@@ -8,7 +8,9 @@ Docente: Nicolas Perez
 -- -----------------------------------------------------
 
 LINK AL DER: https://github.com/FrancoSosaZ0206/SIU-Guarani--TP-/blob/main/tp_final_der.svg
-LINK AL VIDEO EXPLICATIVO: [paste here]
+VIDEO EXPLICATIVO:
+  - PARTE 1: https://youtu.be/RCK1V2Vrskg
+  - PARTE 2: https://youtu.be/gpYwO6kcc7k
 
 */
 

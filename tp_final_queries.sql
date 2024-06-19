@@ -58,7 +58,7 @@ GROUP BY d.nombre;
 -- 8. Obtener los datos de contacto de un alumno específico
 SELECT a.matricula, c.email, c.telefono
 FROM alumnos a
-JOIN contactos c ON a.personas_dni = c.Personas_dni
+JOIN contactos c ON a.personas_dni = c.personas_dni
 WHERE a.matricula = 'A-F67890';
 
 -- 9. Listar las materias que tienen correlatividades
